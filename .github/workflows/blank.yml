@@ -29,7 +29,9 @@ jobs:
       - name: Run a one-line script
         env: 
           SUPER_SECRET: ${{ secrets.SuperSecret }}
-        run: echo "$env:SUPER_SECRET"
+        run: | 
+          echo "$env:SUPER_SECRET"
+          echo "${{ secrets.SuperSecret }}"
         
 
       # Runs a set of commands using the runners shell
