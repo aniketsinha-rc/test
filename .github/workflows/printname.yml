@@ -16,4 +16,4 @@ jobs:
       - name: Run Python Script
         env:
           MY_NAME: ${{ secrets.MY_NAME_SECRET }}
-        run: python ./s/test/print_name.py
+        run: python print_name.py
