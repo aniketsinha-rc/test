@@ -23,4 +23,4 @@ jobs:
         # run: echo "MY_${{ inputs.name }}_SECRET"
         env:
           MY_NAME: ${{ secrets.MY_NAME_SECRET }}
-        run: python print_name.py
+        run: python ./folder/folder_second/print_name.py
