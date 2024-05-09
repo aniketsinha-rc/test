@@ -29,7 +29,7 @@ jobs:
       - name: Print Variable
         run: |
           # Load variables from the file
-          source .github/variables/variables.env
+          source ./.github/variables/variables.env
 
           # Print the value of the variable
           echo "Variable Value: $VARIABLE_NAME"
