@@ -1,4 +1,4 @@
-name: Print Name from JSON
+name: Print Name
 
 on:
   push:
@@ -14,5 +14,5 @@ jobs:
 
       - name: Run Python Script
         env:
-          PERSON_JSON: ${{ secrets.PERSON_JSON }}
+          MY_NAME: ${{ secrets.MY_NAME_SECRET }}
         run: python print_name.py
