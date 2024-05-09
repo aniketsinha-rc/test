@@ -20,8 +20,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Python Script
-        run: echo "MY_${{ inputs.name }}_SECRET"
-        # env:
-        #   MY_NAME_S: ${{ secrets.MY_NAME_SECRET }}
-        #   MY_NAME: ${{ secrets.concat('MY_', ${{ inputs.name }}, '_SECRET') }}
-        # run: python print_name.py
+        # run: echo "MY_${{ inputs.name }}_SECRET"
+        env:
+          MY_NAME_S: ${{ secrets.MY_NAME_SECRET }}
+          MY_NAME: ${{ secrets.MY_${{ inputs.name }}_SECRET) }}
+        run: python print_name.py
