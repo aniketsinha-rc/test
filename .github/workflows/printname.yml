@@ -27,6 +27,7 @@ jobs:
         working-directory: ./folder/folder_second
 
       - name: Print Variable
+        uses: ./.github/variables
         run: |
           # Print the value of the variable
           echo "Variable Value: $VARIABLE_NAME"
