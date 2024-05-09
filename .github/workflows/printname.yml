@@ -25,3 +25,8 @@ jobs:
           MY_NAME: ${{ secrets.MY_NAME_SECRET }}
         run: python print_name.py
         working-directory: ./folder/folder_second
+
+      - name: Print Variable
+        run: echo "Variable Value: $VARIABLE_NAME"
+        with:
+          varFilePath: ./.github/variables/variablefile.env
