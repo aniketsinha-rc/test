@@ -27,12 +27,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      # - name: Run Python Script
-      #   # run: echo "MY_${{ inputs.name }}_SECRET"
-      #   env:
-      #     MY_NAME: ${{ secrets.MY_NAME_SECRET }}
-      #   run: python print_name.py
-      #   working-directory: ./folder/folder_second
+      - name: Run Python Script
+        # run: echo "MY_${{ inputs.name }}_SECRET"
+        env:
+          MY_NAME: ${{ secrets[format('{0}_Name', github.event.inputs.envName)] }}
+        run: python print_name.py
+        working-directory: ./folder/folder_second
 
       # - name: Print Variable
       #   uses: ./.github/variables
