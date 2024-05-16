@@ -41,8 +41,8 @@ jobs:
       #     echo "Variable Value: $VARIABLE_NAME"
       - name: Retrive dev cred
         run: |
-          ENVIRONMENT="${{github.event.inputs.envName}}"
-          ADMIN_USERNAME="${{ secrets["${ENVIRONMENT}_Name"] }}"
+          ENVIRONMENT="${{github.event.inputs.envName}}_Name"
+          ADMIN_USERNAME="${{ secrets[${ENVIRONMENT}] }}"
 
       - name: Print dev secret
         run: echo "devName:$ADMIN_USERNAME"
