@@ -46,4 +46,4 @@ jobs:
 
       - name: Print dev secret
         # run: echo "devName:$ADMIN_USERNAME"
-        run: echo "${{ secrets[format('{0}_Name', github.event.inputs.envName)] }}"
+        run: echo "$MY_NAME"
