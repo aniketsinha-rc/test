@@ -39,11 +39,11 @@ jobs:
       #   run: |
       #     # Print the value of the variable
       #     echo "Variable Value: $VARIABLE_NAME"
-      - name: Retrive dev cred
-        run: |
-          ENVIRONMENT="${{github.event.inputs.envName}}_Name"
-          ADMIN_USERNAME="${{ secrets[${ENVIRONMENT}] }}"
+      # - name: Retrive dev cred
+      #   run: |
+      #     ENVIRONMENT="${{github.event.inputs.envName}}_Name"
+      #     ADMIN_USERNAME="${{ secrets[${ENVIRONMENT}] }}"
 
       - name: Print dev secret
-        run: echo "devName:$ADMIN_USERNAME"
-        
+        # run: echo "devName:$ADMIN_USERNAME"
+        run: echo "${{ secrets[format('{0}_Name', github.event.inputs.envName)] }}"
